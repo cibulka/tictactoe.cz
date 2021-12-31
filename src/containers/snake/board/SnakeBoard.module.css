@@ -1,0 +1,41 @@
+.snakeCell {
+  position: relative;
+}
+.snakeCell:after {
+  content: '';
+  padding-bottom: 100%;
+}
+
+.snakeBody {
+  position: relative;
+  @apply rounded;
+  @apply bg-green-600;
+}
+
+.snakeHead:before {
+  content: '';
+  width: 25%;
+  height: 75%;
+  position: absolute;
+  z-index: 1;
+  top: -25%;
+  left: 50%;
+  transform-origin: bottom center;
+  @apply bg-green-600;
+}
+.snakeHeadDead:before {
+  @apply bg-red-500;
+}
+
+.snakeHeadTop:before {
+  transform: translateX(-50%);
+}
+.snakeHeadRight:before {
+  transform: translateX(-50%) rotate(90deg);
+}
+.snakeHeadLeft:before {
+  transform: translateX(-50%) rotate(-90deg);
+}
+.snakeHeadBottom:before {
+  transform: translateX(-50%) rotate(180deg);
+}

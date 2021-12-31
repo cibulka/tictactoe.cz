@@ -1,0 +1,95 @@
+/* PRIMARY */
+/* ====================================== */
+
+.primary {
+  @apply flex;
+  @apply rounded px-2;
+  @apply border-b-4;
+  border: solid 0.5px theme(colors.slate.400);
+  padding-top: 0.25rem;
+  padding-bottom: 0.33rem; /* <= rounded border-bottom */
+}
+
+/* Primary: Colors */
+
+.primary-bgButton {
+  @apply text-text;
+  @apply bg-slate-300;
+  border-bottom: solid 6px theme(colors.slate.600);
+}
+:global(.dark) .bgButton {
+  @apply bg-stone-300;
+  @apply border-stone-500;
+  border-bottom-width: 4px;
+}
+
+:global(.dark) .primary-bgRainbow,
+.primary-bgRainbow {
+  background-color: theme(colors.yellow.500);
+  background-image: linear-gradient(
+    319deg,
+    theme(colors.blue.500) 0%,
+    theme(colors.yellow.500) 37%,
+    theme(colors.green.500) 100%
+  );
+  @apply text-gray-900;
+}
+
+:global(.dark) .primary-bgBlue,
+.primary-bgBlue {
+  @apply bg-blue-500;
+  @apply border-blue-700;
+  border-bottom-width: 4px;
+}
+
+.primary-bgRainbow {
+  border-bottom: solid 2px theme(colors.slate.600);
+}
+
+:global(.dark) .primary-bgRainbow {
+  border-bottom: solid 2px theme(colors.slate.500);
+}
+
+:global(.dark) .primary-bgYellow,
+.primary-bgYellow {
+  background-color: theme('colors.red.500');
+  background-image: linear-gradient(
+    315deg,
+    theme('colors.red.500') 0%,
+    theme('colors.orange.500') 74%
+  );
+  @apply font-bold;
+}
+
+/* COLORED */
+/* ====================================== */
+
+.colored {
+  @apply rounded px-2 py-1;
+}
+
+/* GHOST */
+/* ====================================== */
+
+.ghost {
+  @apply rounded px-2 py-1;
+  @apply border-2;
+}
+
+/* SECONDARY */
+/* ====================================== */
+
+.secondary {
+  @apply underline;
+}
+
+/* ====================================== */
+
+/* Disabled */
+
+.primary[disabled],
+.ghost[disabled],
+.secondary[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

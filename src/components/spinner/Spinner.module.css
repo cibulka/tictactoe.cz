@@ -1,0 +1,25 @@
+.spinner {
+  position: relative;
+  @apply animate-spin;
+  @apply rounded-full;
+}
+
+.spinner:before,
+.spinner:after {
+  content: '';
+  @apply absolute inset-0;
+  @apply rounded-full;
+}
+
+.spinner:before {
+  opacity: 0.3;
+  border: solid 0.2em currentColor;
+}
+
+.spinner:after {
+  opacity: 1;
+  border-top: solid 0.2em currentColor;
+  border-right: solid 0.2em transparent;
+  border-bottom: solid 0.2em transparent;
+  border-left: solid 0.2em transparent;
+}

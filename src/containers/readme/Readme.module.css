@@ -1,0 +1,23 @@
+.formatWrap h2 {
+  @apply text-xl mt-8 mb-4;
+}
+
+.formatWrap p,
+.formatWrap code {
+  @apply mb-4 block;
+}
+
+.formatWrap code {
+  @apply block w-full;
+  @apply bg-stone-300 p-2;
+  @apply text-xs;
+  overflow-x: scroll;
+}
+
+:global(.dark) .formatWrap code {
+  @apply bg-gray-800;
+}
+
+.formatWrap a {
+  @apply text-sky-500 underline;
+}
