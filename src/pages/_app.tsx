@@ -1,4 +1,4 @@
-import { Fragment, StrictMode } from 'react';
+import { Fragment, StrictMode, useEffect } from 'react';
 import { SnackbarProvider } from 'notistack';
 import type { AppProps } from 'next/app';
 import { createTheme } from '@mui/material/styles';
@@ -6,6 +6,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { StyledEngineProvider } from '@mui/material/styles';
 
 import { ServerRouterLocaleContext } from 'src/context';
+import { googleAnalyticsPageView } from 'src/helpers/googleAnalytics';
 import { useSelector, wrapper } from 'src/redux';
 import getTheme from 'src/theme/mui';
 
@@ -25,6 +26,12 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       mode: isDarkMode ? 'dark' : undefined,
     },
   });
+
+  // GA
+  useEffect(() => {
+    router.events.on('routeChangeComplete', googleAnalyticsPageView);
+    return () => router.events.off('routeChangeComplete', googleAnalyticsPageView);
+  }, [router]);
 
   if (!router.locale || !router.locales) throw Error('Badly configured locales');
 
