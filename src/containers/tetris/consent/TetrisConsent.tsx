@@ -15,7 +15,7 @@ const TetrisConsent: FC<{ translate: Translate }> = (props) => {
         onClick: () => dispatch(setIsConsent(true)),
         label: props.translate('consent.submit'),
       }}
-      buttonGradient="yellow"
+      buttonGradient="blue"
       icon={<IconTetris className="text-yellow-500" />}
       title={props.translate('consent.title')}
       text={props.translate('consent.info')}

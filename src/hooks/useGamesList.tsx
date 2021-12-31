@@ -57,7 +57,5 @@ export default function useGamesList(): Result {
     },
   };
 
-  console.log(result);
-
   return result;
 }

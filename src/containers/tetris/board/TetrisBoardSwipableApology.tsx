@@ -14,7 +14,7 @@ const TetrisBoardSwipableApology: FC<{ translate: Translate }> = (props) => (
       <p className="p-4 text-center text-lg">{props.translate('swipable.apology')}</p>
       <Link href="/">
         <a className="flex">
-          <Button component="span" gradient="main" className="font-bold" variant="primary">
+          <Button component="span" gradient="rainbow" className="font-bold" variant="primary">
             {props.translate('swipable.action')}
           </Button>
         </a>

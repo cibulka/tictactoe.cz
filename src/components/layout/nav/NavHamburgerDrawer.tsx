@@ -83,7 +83,7 @@ const NavHamburgerDrawer: FC<{
             </li>
           ))}
         </ul>
-      </div>{' '}
+      </div>
       <div className="mb-8">
         <h2 className="tic-h3 mb-2 px-2">{props.translate('mobileNav.settings.title')}</h2>
         <ul className="text-xs">

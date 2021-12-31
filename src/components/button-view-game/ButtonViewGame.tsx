@@ -5,7 +5,7 @@ import { GameName } from 'src/types/app';
 
 const ButtonViewGame: FC<{
   className?: string;
-  classNameIconSize?: 'tic-icon-xl' | 'tic-icon-md';
+  classNameIconSize?: 'tic-icon-xl' | 'tic-icon-md' | 'tic-icon-big';
   gameName: GameName;
   isBorder?: boolean;
   isPadding?: boolean;

@@ -8,7 +8,7 @@ const ConsentBar: FC<{
     onClick: () => void;
     label: string | ReactNode;
   };
-  buttonGradient?: 'rainbow' | 'button' | 'yellow';
+  buttonGradient?: 'rainbow' | 'button' | 'blue';
   icon: ReactNode;
   screen?: {
     href: string;

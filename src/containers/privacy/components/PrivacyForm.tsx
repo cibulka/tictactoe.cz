@@ -72,7 +72,7 @@ const Privacy: FC<{ translate: Translate }> = (props) => {
       </div>
       <div className="sticky bottom-12">
         <Button
-          gradient="main"
+          gradient="rainbow"
           className="font-bold"
           isLoading={isSubmitting}
           type="submit"
